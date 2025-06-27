@@ -1,0 +1,9 @@
+{% extends "gestion_lotes/base.html" %}
+{% block content %}
+<h2>Subir Archivo de Lote</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Subir</button>
+</form>
+{% endblock %}
